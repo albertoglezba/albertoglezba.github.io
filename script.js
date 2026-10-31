@@ -3,11 +3,12 @@ const messages = {
   en: {
     eyebrow: "Personal website",
     title: "Under development",
-    message: "TI'm renewing this website, is being prepared and will be available soon.",
+    message: "I'm renewing this website, is being prepared and will be available soon.",
+    resumeDownload: "Download my résumé (PDF)",
     contactHeading: "Contact details",
     reveal: "Click to reveal as text",
     close: "Hide contact details",
-    footer: "© 2026",
+    footer: "© October 2026",
     language: "Choose language",
     revealButton: "Reveal contact details as text"
   },
@@ -15,10 +16,11 @@ const messages = {
     eyebrow: "Sitio personal",
     title: "En desarrollo",
     message: "Este sitio se está preparando y pronto estará disponible.",
+    resumeDownload: "Descargar mi currículum (PDF)",
     contactHeading: "Datos de contacto",
     reveal: "Haz clic para verlos como texto",
     close: "Ocultar datos de contacto",
-    footer: "© 2026",
+    footer: "© Octubre de 2026",
     language: "Seleccionar idioma",
     revealButton: "Mostrar datos de contacto como texto"
   }
