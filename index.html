@@ -1,77 +1,41 @@
 <!doctype html>
-<html lang="es-MX">
-<head>
-  <!-- =========================================================
-       METADATOS Y CONFIGURACIÓN DEL DOCUMENTO
-       ========================================================= -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Perfil profesional de Alberto González Bautista: desarrollo web, arquitectura, DevOps y gestión de proyectos.">
-  <meta name="author" content="Alberto González Bautista">
-  <meta name="theme-color" content="#071a2d">
-  <title>Alberto González Bautista</title>
-
-  <!-- =========================================================
-       HOJAS DE ESTILO EXTERNAS
-       ========================================================= -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-  <!-- =========================================================
-       CONTENEDOR PRINCIPAL
-       ========================================================= -->
-  <main class="resume" id="top">
-
-    <!-- =======================================================
-         CABECERA / PRESENTACIÓN
-         ======================================================= -->
-    <header class="hero section-shell">
-      <div class="hero__content">
-        <div class="hero__eyebrow" aria-label="Áreas profesionales">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#263648">
+    <meta name="description" content="A personal contact page. Website coming soon.">
+    <title>Personal website | Coming soon</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar" aria-label="Language selection">
+        <div class="language-toggle" role="group" aria-label="Choose language">
+          <button type="button" class="language-button is-active" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" class="language-button" data-language="es" aria-pressed="false">ES</button>
         </div>
+      </header>
 
-        <div class="hero__identity">
-          <div class="hero__copy">
-            <p class="hero__first-name"> Gerardo Alberto</p>
-            <h1>González Bautista</h1>
+      <section class="content" aria-labelledby="page-title">
+        <p class="eyebrow" data-i18n="eyebrow">Personal website</p>
+        <h1 id="page-title" data-i18n="title">Under development</h1>
+        <p class="status-message" data-i18n="message">I'm renewing this website, is being prepared and will be available soon.</p>
 
-            <address class="contact-list" aria-label="Datos de contacto">
-              <a href="https://maps.google.com/?q=Ciudad+de+México,+México" target="_blank" rel="noopener noreferrer">
-                <span class="contact-list__icon" aria-hidden="true">⌖</span>
-                Ciudad de México, México
-              </a>
-              <a href="https://linkedin.com/in/albertoglezba" target="_blank" rel="noopener noreferrer">
-                <span class="contact-list__icon" aria-hidden="true">in</span>
-                linkedin.com/in/albertoglezba
-              </a>
-              <a href="https://github.com/albertoglezba" target="_blank" rel="noopener noreferrer">
-                <span class="contact-list__icon" aria-hidden="true">●</span>
-                github.com/albertoglezba
-              </a>
-            </address>
+        <section class="contact" aria-labelledby="contact-heading">
+          <h2 id="contact-heading" class="visually-hidden" data-i18n="contactHeading">Contact details</h2>
+          <button id="contact-toggle" class="contact-card" type="button" aria-expanded="false" aria-controls="contact-details">
+            <img src="contact-card.png" alt="" width="1200" height="420">
+            <span class="contact-hint" data-i18n="reveal">Click to reveal as text</span>
+          </button>
+          <div id="contact-details" class="contact-details" hidden></div>
+        </section>
+      </section>
 
-            <section class="summary" aria-labelledby="summary-title">
-              <h2 id="summary-title"></h2>
-              <p></p>
-            </section>
-          </div>
-
-          <!-- =================================================
-               ESPACIO RESERVADO PARA FOTO / ILUSTRACIÓN
-               Sustituir este bloque por la imagen final cuando
-               esté disponible.
-               ================================================= -->
-          <div class="profile-placeholder" role="img" aria-label="Espacio reservado para fotografía profesional">
-            <div class="profile-placeholder__glow" aria-hidden="true"></div>
-            <div class="profile-placeholder__icon" aria-hidden="true">🧑‍💻</div>
-            <span></span>
-            <small>PROXIMAMENTE</small>
-          </div>
-        </div>
-      </div>
-    </header>
-  </main>
-
-</body>
+      <footer class="footer">
+        <small data-i18n="footer">© 2026</small>
+      </footer>
+    </main>
+  </body>
 </html>
