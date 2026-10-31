@@ -3,7 +3,7 @@ const messages = {
   en: {
     eyebrow: "Personal website",
     title: "Under development",
-    message: "I'm renewing this website, is being prepared and will be available soon.",
+    message: "I'm renewing (building) this website, it will be available quite soon.",
     resumeDownload: "Download my résumé (PDF)",
     contactHeading: "Contact details",
     reveal: "Click to reveal as text",
@@ -15,7 +15,7 @@ const messages = {
   es: {
     eyebrow: "Sitio personal",
     title: "En desarrollo",
-    message: "Este sitio se está preparando y pronto estará disponible.",
+    message: "Me encuentro renovando (construyendo) este sitio, estara disponible muy pronto.",
     resumeDownload: "Descargar mi currículum (PDF)",
     contactHeading: "Datos de contacto",
     reveal: "Haz clic para verlos como texto",
