@@ -5,6 +5,8 @@ const messages = {
     title: "Under development",
     message: "I'm renewing (building) this website, it will be available quite soon.",
     resumeDownload: "Download my résumé (PDF)",
+    city: "Mexico City, Mexico",
+    cardReveal: "Click to reveal",
     contactHeading: "Contact details",
     reveal: "Click to reveal as text",
     close: "Hide contact details",
@@ -17,6 +19,8 @@ const messages = {
     title: "En desarrollo",
     message: "Me encuentro renovando (construyendo) este sitio, estara disponible muy pronto.",
     resumeDownload: "Descargar mi currículum (PDF)",
+    city: "Ciudad de México, México",
+    cardReveal: "Haz clic para revelar",
     contactHeading: "Datos de contacto",
     reveal: "Haz clic para verlos como texto",
     close: "Ocultar datos de contacto",
@@ -58,6 +62,8 @@ function setLanguage(nextLanguage) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.textContent = messages[language][element.dataset.i18n];
   });
+  document.querySelector("#contact-card-city").textContent = messages[language].city;
+  document.querySelector("#contact-card-reveal").textContent = messages[language].cardReveal;
   document.querySelector(".language-toggle").setAttribute("aria-label", messages[language].language);
   revealButton.setAttribute("aria-label", messages[language].revealButton);
   languageButtons.forEach((button) => {
@@ -65,8 +71,7 @@ function setLanguage(nextLanguage) {
     button.classList.toggle("is-active", active);
     button.setAttribute("aria-pressed", String(active));
   });
-  const closeButton = details.querySelector("button");
-  if (closeButton) closeButton.textContent = messages[language].close;
+  if (!details.hidden) showContact();
 }
 
 function addLine(parent, text, href) {
@@ -87,7 +92,7 @@ function showContact() {
   heading.textContent = messages[language].contactHeading;
   details.replaceChildren(heading);
   addLine(details, decode(contact.name));
-  addLine(details, decode(contact.city));
+  addLine(details, messages[language].city);
   addLine(details, decode(contact.email), `mailto:${decode(contact.email)}`);
   addLine(details, decode(contact.linkedin).replace(/^https?:\/\//, ""), decode(contact.linkedin));
   addLine(details, decode(contact.github).replace(/^https?:\/\//, ""), decode(contact.github));

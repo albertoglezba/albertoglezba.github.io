@@ -26,7 +26,17 @@
         <section class="contact" aria-labelledby="contact-heading">
           <h2 id="contact-heading" class="visually-hidden" data-i18n="contactHeading">Contact details</h2>
           <button id="contact-toggle" class="contact-card" type="button" aria-expanded="false" aria-controls="contact-details">
-            <img src="contact-card.svg" alt="" width="1200" height="420">
+            <svg class="contact-card-image" xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" aria-hidden="true">
+              <rect x="1" y="1" width="1198" height="418" rx="32" fill="#000" stroke="#f4f7fa" stroke-width="2"/>
+              <path d="M19 39v342" stroke="#78d4d2" stroke-width="7" stroke-linecap="round"/>
+              <g font-family="Arial, Helvetica, sans-serif" font-weight="700">
+                <text x="46" y="82" fill="#f4f7fa" font-size="48">Gerardo Alberto González Bautista</text>
+                <text id="contact-card-city" x="46" y="157" fill="#cbd5dc" font-size="30">Mexico City, Mexico</text>
+                <text x="46" y="231" fill="#f4f7fa" font-size="30">[<tspan id="contact-card-reveal">Click to reveal</tspan>] @ gmail [dot] com</text>
+                <text x="46" y="303" fill="#78d4d2" font-size="28">linkedin.com/in/albertoglezba</text>
+                <text x="46" y="365" fill="#78d4d2" font-size="28">github.com/albertoglezba</text>
+              </g>
+            </svg>
             <span class="contact-hint" data-i18n="reveal">Click to reveal as text</span>
           </button>
           <div id="contact-details" class="contact-details" hidden></div>
