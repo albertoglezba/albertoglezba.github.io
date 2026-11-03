@@ -26,6 +26,11 @@ const messages = {
   }
 };
 
+const resumeFiles = {
+  en: { path: "Resume_G_Alberto_Glez_Btta_v2026_EN.pdf", filename: "Resume_G_Alberto_Glez_Btta_v2026_EN.pdf" },
+  es: { path: "CV_G_Alberto_Glez_Btta_v2026_ES.pdf", filename: "CV_G_Alberto_Glez_Btta_v2026_ES.pdf" }
+};
+
 // Encoding keeps contact text out of the static page; it is reversible and
 // only discourages basic text crawlers. The public image can still be OCRed.
 const decode = (value) => new TextDecoder().decode(
@@ -43,10 +48,13 @@ const contact = {
 const languageButtons = document.querySelectorAll("[data-language]");
 const revealButton = document.querySelector("#contact-toggle");
 const details = document.querySelector("#contact-details");
+const resumeDownload = document.querySelector(".resume-download");
 let language = "en";
 
 function setLanguage(nextLanguage) {
   language = messages[nextLanguage] ? nextLanguage : "en";
+  resumeDownload.href = resumeFiles[language].path;
+  resumeDownload.download = resumeFiles[language].filename;
   document.documentElement.lang = language;
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.textContent = messages[language][element.dataset.i18n];
