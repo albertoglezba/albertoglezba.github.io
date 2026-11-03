@@ -39,7 +39,6 @@ const decode = (value) => new TextDecoder().decode(
 const contact = {
   name: "R2VyYXJkbyBBbGJlcnRvIEdvbnrDoWxleiBCYXV0aXN0YQ==",
   city: "TWV4aWNvIENpdHksIE1leGljbw==",
-  phone: "KzUyIDU1LTU0MDMtNDUzMw==",
   email: "YWxiZXJ0b2dsZXpiYUBnbWFpbC5jb20=",
   linkedin: "aHR0cHM6Ly9saW5rZWRpbi5jb20vaW4vYWxiZXJ0b2dsZXpiYQ==",
   github: "aHR0cHM6Ly9naXRodWIuY29tL2FsYmVydG9nbGV6YmE="
@@ -88,7 +87,7 @@ function showContact() {
   heading.textContent = messages[language].contactHeading;
   details.replaceChildren(heading);
   addLine(details, decode(contact.name));
-  addLine(details, `${decode(contact.city)} · ${decode(contact.phone)}`, `tel:${decode(contact.phone).replaceAll(" ", "")}`);
+  addLine(details, decode(contact.city));
   addLine(details, decode(contact.email), `mailto:${decode(contact.email)}`);
   addLine(details, decode(contact.linkedin).replace(/^https?:\/\//, ""), decode(contact.linkedin));
   addLine(details, decode(contact.github).replace(/^https?:\/\//, ""), decode(contact.github));
